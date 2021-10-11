@@ -21,7 +21,7 @@ export const plants = [
         id: '4', 
         name: 'Monstera Deliciosa',
         img: './assets/MonsteraDeliciosa.jpeg',
-        price: '$30'
+        price: '$50'
     },
     {
         id: '5', 
