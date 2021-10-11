@@ -36,4 +36,4 @@ export const plants = [
         price: '$70'
     },
     
-]
+];

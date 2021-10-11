@@ -6,8 +6,8 @@ import { renderPlants } from './renderPlants.js';
 const productPage = document.getElementById('product-page');
 
 for (let plant of plants) {
-  const plantCard = renderPlants(plant);
-  productPage.append(plantCard);
+    const plantCard = renderPlants(plant);
+    productPage.append(plantCard);
 }
 
 // initialize global state

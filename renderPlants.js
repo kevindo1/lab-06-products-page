@@ -12,7 +12,7 @@ export function renderPlants(plant) {
     plantPrice.textContent = plant.price;
 
     const buyButton = document.createElement('button');
-    buyButton.textContent = 'Add to Cart'
+    buyButton.textContent = 'Add to Cart';
 
     plantCard.append(plantHeader, plantImg, plantPrice, buyButton);
 
