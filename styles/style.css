@@ -13,10 +13,12 @@ h1 {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    min-width: 20%;
 }
 
 .plant-card {
     width: 33%;
+    min-width: 20%;
     height: 33%;
     border: 5px solid black;
     border-radius: 10px;
@@ -32,6 +34,7 @@ h1 {
 
 .plant-card img {
     width: 300px;
+    max-width: 70%;
     height: 300px;
     border-radius: 10px;
     display: flex;
