@@ -17,5 +17,23 @@ export const plants = [
         img: './assets/PhilodendronLinamii.jpeg',
         price: '$450'
     },
+    {
+        id: '4', 
+        name: 'Monstera Deliciosa',
+        img: './assets/MonsteraDeliciosa.jpeg',
+        price: '$30'
+    },
+    {
+        id: '5', 
+        name: 'Monstera Adonsonii',
+        img: './assets/MonsteraAdonsonii.jpeg',
+        price: '$40'
+    },
+    {
+        id: '6', 
+        name: 'Alocasia Cuprea',
+        img: './assets/AlocasiaCuprea.jpg',
+        price: '$70'
+    },
     
 ]

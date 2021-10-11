@@ -8,6 +8,13 @@ export function renderPlants(plant) {
     const plantImg = document.createElement('img');
     plantImg.src = plant.img;
 
-    plantCard.append(plantHeader, plantImg);
-    plantCard.appendChild(plantHeader, plantImg);
+    const plantPrice = document.createElement('h4');
+    plantPrice.textContent = plant.price;
+
+    const buyButton = document.createElement('button');
+    buyButton.textContent = 'Add to Cart'
+
+    plantCard.append(plantHeader, plantImg, plantPrice, buyButton);
+
+    return plantCard;
 }
