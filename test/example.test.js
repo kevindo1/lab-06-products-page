@@ -31,7 +31,7 @@ test('findById should return the item and matching Id', (expect) => {
         name: 'Anthurium Regale',
         img: './assets/AnthuriumRegale.jpeg',
         price: 120
-    }
+    };
     //Act 
     // Call the function you're testing and set the result to a const
 

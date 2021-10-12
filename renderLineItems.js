@@ -1,4 +1,4 @@
-import { toUSD } from "./utilities/utils.js";
+import { toUSD } from './utilities/utils.js';
 
 export function renderLineItems(cartItem, plantData) {
     const tr = document.createElement('tr');

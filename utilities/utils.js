@@ -13,13 +13,13 @@ export function calculatorOrderTotal(cart, plants) {
     // add the quantity * price
     
     let orderTotal = 0;
-    for (let item of cart){
-        const plant = findById(item.id, plants)
+    for (let item of cart) {
+        const plant = findById(item.id, plants);
         orderTotal = orderTotal + plant.price * item.quantity;
     }
     return orderTotal;
 }
 
 export function toUSD(number) {
-    return number.toLocaleString('en-us', {style: 'currency', currency: 'USD'})
+    return number.toLocaleString('en-us', { style: 'currency', currency: 'USD' });
 }
