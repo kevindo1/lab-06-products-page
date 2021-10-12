@@ -1,6 +1,6 @@
 // import functions and grab DOM elements
 
-import { plants } from './plants.js';
+import { plants } from './data/plants.js';
 import { renderPlants } from './renderPlants.js';
 
 const productPage = document.getElementById('product-page');
