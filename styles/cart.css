@@ -6,14 +6,24 @@ body {
     align-items: center;
 }
 
+a {
+    display: flex;
+    margin: auto;
+    font-size: 2rem;
+    justify-content: center;
+}
+
 table {
     border-collapse: collapse;
     background-color: #A6D7D0;
     margin: 30px;
+    border-radius: 30px;
+    border-style: hidden; 
+    box-shadow: 0 0 0 3px black;
 }
 
-table, th {
-    border: 1px solid black;
+th {
+    border: 1.5px solid black;
 }
 
 th, td {
