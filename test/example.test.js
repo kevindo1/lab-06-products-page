@@ -59,4 +59,4 @@ test('renderLineItems should return the cart line item', (expect) => {
     const actual = renderLineItems(cartItem, plantData).outerHTML;
 
     expect.deepEqual(actual, expected);
-})
+});
