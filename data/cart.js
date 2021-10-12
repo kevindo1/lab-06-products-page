@@ -7,7 +7,6 @@ const tbody = document.getElementById('table-body');
 for (let cartItem of cart) {
     const plantData = findById(cartItem.id, plants);
 
-    
     const tr = document.createElement('tr');
 
     const tdName = document.createElement('td');
@@ -17,10 +16,10 @@ for (let cartItem of cart) {
     tdPrice.textContent = plantData.price;
 
     const tdQty = document.createElement('td');
-    tdQty.textContent = plantData.qty;
+    tdQty.textContent = cartItem.quantity;
 
     const tdTotal = document.createElement('td');
-    tdTotal.textContent = plantData.qty * plantData.price;
+    tdTotal.textContent = cartItem.quantity * plantData.price;
 
     tr.append(tdName, tdPrice, tdQty, tdTotal);
     tbody.appendChild(tr);

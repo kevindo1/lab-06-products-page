@@ -1,0 +1,22 @@
+body {
+    background-color: #50AFA2;
+    font-family: 'Crimson Text', serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+table {
+    border-collapse: collapse;
+    background-color: #A6D7D0;
+    margin: 30px;
+}
+
+table, th {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 15px;
+    text-align: right;
+}
