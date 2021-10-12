@@ -4,6 +4,7 @@ import { plants } from '../data/plants.js';
 import { renderPlants } from '../renderPlants.js';
 import { findById, calculatorOrderTotal } from '../utilities/utils.js';
 import { cart } from '../data/cart-data.js';
+import { renderLineItems } from '../renderLineItems.js';
 
 const test = QUnit.test;
 
@@ -49,3 +50,13 @@ test('calcOrderTotal should return the order total', (expect) => {
 
     expect.deepEqual(actual, expected);
 });
+
+test('renderLineItems should return the cart line item', (expect) => {
+    const expected = '<tr><td>Anthurium Regale</td><td>$120.00</td><td>2</td><td>$240.00</td></tr>';
+
+    const cartItem = cart[0];
+    const plantData = plants[0];
+    const actual = renderLineItems(cartItem, plantData).outerHTML;
+
+    expect.deepEqual(actual, expected);
+})
