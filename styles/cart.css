@@ -1,0 +1,34 @@
+body {
+    background-color: #50AFA2;
+    font-family: 'Crimson Text', serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a {
+    display: flex;
+    margin: auto;
+    font-size: 2rem;
+    justify-content: center;
+}
+
+table {
+    border-collapse: collapse;
+    background-color: #A6D7D0;
+    margin: 30px;
+    border-radius: 10px;
+    border-style: hidden; 
+    box-shadow: 0 0 0 3px black;
+}
+
+th {
+    border-style: hidden; 
+    box-shadow: 0 0 0 3px black;
+    background-color: teal;
+}
+
+th, td {
+    padding: 15px;
+    text-align: right;
+}

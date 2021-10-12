@@ -11,6 +11,13 @@ h1 {
     justify-content: center;
 }
 
+a {
+    display: flex;
+    margin: auto;
+    font-size: 2rem;
+    justify-content: center;
+}
+
 #product-page {
     display: flex;
     flex-direction: row;
