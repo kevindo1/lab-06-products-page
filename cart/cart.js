@@ -13,13 +13,13 @@ for (let cartItem of cart) {
     tdName.textContent = plantData.name;
 
     const tdPrice = document.createElement('td');
-    tdPrice.textContent = plantData.price;
+    tdPrice.textContent = `$${plantData.price}`;
 
     const tdQty = document.createElement('td');
     tdQty.textContent = cartItem.quantity;
 
     const tdTotal = document.createElement('td');
-    tdTotal.textContent = cartItem.quantity * plantData.price;
+    tdTotal.textContent = `$${cartItem.quantity * plantData.price}`;
 
     tr.append(tdName, tdPrice, tdQty, tdTotal);
     tbody.appendChild(tr);
