@@ -7,7 +7,7 @@ export function renderLineItems(cartItem, plantData) {
     tdName.textContent = plantData.name;
 
     const tdPrice = document.createElement('td');
-    tdPrice.textContent = `$${plantData.price}`;
+    tdPrice.textContent = toUSD(plantData.price);
 
     const tdQty = document.createElement('td');
     tdQty.textContent = cartItem.quantity;
