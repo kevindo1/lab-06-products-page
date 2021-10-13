@@ -99,6 +99,13 @@ test('addItem will increment an item that is in the cart', (expect) => {
     expect.deepEqual(cart, expected);
 });
 
-test('addItem will increment an item that is in the cart', (expect) => {
+test('addItem will add a new item if not in the cart', (expect) => {
+    localStorage.removeItem('CART');
+    const expected = [
+        { id: '1', qty: 1 }
+    ];
+    addItem('1');
 
+    const cart = getCart();
+    expect.deepEqual(cart, expected);
 });
