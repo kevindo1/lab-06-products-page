@@ -25,7 +25,7 @@ export function toUSD(number) {
 }
 
 export function getCart() {
-    const cartString = localStorage.getItem('CART');
+    const cartString = localStorage.getItem('CART') || '[]';
     const cart = JSON.parse(cartString);
     return cart;
 }
