@@ -43,3 +43,4 @@ export function addItem(id) {
     const stringCart = JSON.stringify(cart);
     localStorage.setItem('CART', stringCart);
 }
+

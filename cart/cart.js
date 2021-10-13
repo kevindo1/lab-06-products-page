@@ -14,8 +14,14 @@ for (let cartItem of cart) {
     const tr = renderLineItems(cartItem, plantData);
 
     tbody.appendChild(tr);
-}
+};
 
 const orderTotal = calculatorOrderTotal(cart, plants);
 tdOrderTotal.textContent = toUSD(orderTotal);
+
+const placeOrder = document.getElementById('place-order');
+placeOrder.addEventListener('click', ()=> {
+    localStorage.removeItem('CART');
+    window.location.replace('..');
+});
 
