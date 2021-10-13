@@ -1,3 +1,5 @@
+import { toUSD } from './utilities/utils.js'; 
+
 export function renderPlants(plant) {
     const plantCard = document.createElement('div');
     plantCard.classList.add('plant-card');
@@ -9,10 +11,12 @@ export function renderPlants(plant) {
     plantImg.src = plant.img;
 
     const plantPrice = document.createElement('h4');
-    plantPrice.textContent = plant.price;
+    plantPrice.textContent = toUSD(plant.price);
 
     const buyButton = document.createElement('button');
     buyButton.textContent = 'Add to Cart';
+    buyButton.id = plant.id;
+    buyButton.classList.add('buy-button');
 
     plantCard.append(plantHeader, plantImg, plantPrice, buyButton);
 
