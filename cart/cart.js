@@ -26,7 +26,7 @@ placeOrder.addEventListener('click', ()=> {
 });
 
 if (cart.length <= 0) {
-        placeOrder.disabled = true;
+    placeOrder.disabled = true;
 } else {
-        placeOrder.disabled = false;
+    placeOrder.disabled = false;
 }
