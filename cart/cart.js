@@ -25,3 +25,9 @@ placeOrder.addEventListener('click', ()=> {
     window.location.replace('..');
 });
 
+
+if (cart.length <= 0) {
+        placeOrder.disabled = true;
+    } else {
+        placeOrder.disabled = false;
+    };

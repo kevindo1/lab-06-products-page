@@ -37,7 +37,7 @@ export function addItem(id) {
     if (cartItem) {
         cartItem.qty++
     } else {
-        const newItem = {id: id, qty: 1};
+        const newItem = { id: id, qty: 1 };
         cart.push(newItem);
     }
     const stringCart = JSON.stringify(cart);
