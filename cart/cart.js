@@ -1,6 +1,6 @@
 import { plants } from '../data/plants.js';
 // import { cart } from '../data/cart-data.js';
-import { calculatorOrderTotal, findById, toUSD, getCart, addItem } from '../utilities/utils.js';
+import { calculatorOrderTotal, findById, toUSD, getCart } from '../utilities/utils.js';
 import { renderLineItems } from '../renderLineItems.js';
 
 const cart = getCart();
@@ -14,7 +14,7 @@ for (let cartItem of cart) {
     const tr = renderLineItems(cartItem, plantData);
 
     tbody.appendChild(tr);
-};
+}
 
 const orderTotal = calculatorOrderTotal(cart, plants);
 tdOrderTotal.textContent = toUSD(orderTotal);
@@ -25,9 +25,8 @@ placeOrder.addEventListener('click', ()=> {
     window.location.replace('..');
 });
 
-
 if (cart.length <= 0) {
         placeOrder.disabled = true;
-    } else {
+} else {
         placeOrder.disabled = false;
-    };
+}

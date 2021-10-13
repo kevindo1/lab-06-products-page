@@ -35,7 +35,7 @@ export function addItem(id) {
     const cartItem = findById(id, cart);
 
     if (cartItem) {
-        cartItem.qty++
+        cartItem.qty++;
     } else {
         const newItem = { id: id, qty: 1 };
         cart.push(newItem);

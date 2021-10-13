@@ -1,4 +1,4 @@
-import { toUSD } from "./utilities/utils.js"; 
+import { toUSD } from './utilities/utils.js'; 
 
 export function renderPlants(plant) {
     const plantCard = document.createElement('div');

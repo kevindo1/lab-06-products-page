@@ -2,19 +2,16 @@
 // import { example } from '../example.js';
 import { plants } from '../data/plants.js';
 import { renderPlants } from '../renderPlants.js';
-import { findById, calculatorOrderTotal, addItem } from '../utilities/utils.js';
+import { findById, addItem } from '../utilities/utils.js';
 // import { cart } from '../data/cart-data.js';
-import { renderLineItems } from '../renderLineItems.js';
 import { getCart } from '../utilities/utils.js';
 
 const test = QUnit.test;
 
-const cart = getCart(); 
-
 test('renderPlants should return HTML snippet', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = '<div class="plant-card"><h2>Anthurium Regale</h2><img src="./assets/AnthuriumRegale.jpeg"><h4>$120.00</h4><button id=\"1\" class=\"buy-button\">Add to Cart</button></div>';
+    const expected = '<div class="plant-card"><h2>Anthurium Regale</h2><img src="./assets/AnthuriumRegale.jpeg"><h4>$120.00</h4><button id="1" class="buy-button">Add to Cart</button></div>';
     
     //Act 
     // Call the function you're testing and set the result to a const
@@ -113,9 +110,6 @@ test('addItem will add a new item if not in the cart', (expect) => {
 });
 
 test('clearCart will clear the cart', (expect) => {
-    const testCart = [
-        { id: '1', qty: 1}
-    ]
     localStorage.setItem('CART', JSON.stringify('CART'));
     localStorage.removeItem('CART');
     const cart = getCart();

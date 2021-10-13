@@ -19,9 +19,9 @@ for (let plant of plants) {
   // update DOM to reflect the new state
 
 const addButtons = document.querySelectorAll('.buy-button');
-  for (let addButton of addButtons) {
-      addButton.addEventListener('click', ()=> {
-          addItem(addButton.id);
-          alert('Added item to cart');
-      })
-  };
+    for (let addButton of addButtons) {
+    addButton.addEventListener('click', ()=> {
+        addItem(addButton.id);
+        alert('Added item to cart');
+        });
+}
