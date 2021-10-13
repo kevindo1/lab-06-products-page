@@ -2,7 +2,7 @@
 // import { example } from '../example.js';
 import { plants } from '../data/plants.js';
 import { renderPlants } from '../renderPlants.js';
-import { findById, calculatorOrderTotal } from '../utilities/utils.js';
+import { findById, calculatorOrderTotal, addItem } from '../utilities/utils.js';
 import { cart } from '../data/cart-data.js';
 import { renderLineItems } from '../renderLineItems.js';
 import { getCart } from '../utilities/utils.js';
@@ -63,6 +63,7 @@ test('renderLineItems should return the cart line item', (expect) => {
 });
 
 test('getCart will return the cart if it exists', (expect) => {
+    localStorage.removeItem('CART');
     const testCart = [
         { id: '1', qty: 2 },
         { id: '4', qty: 1 }
@@ -72,4 +73,23 @@ test('getCart will return the cart if it exists', (expect) => {
     const cart = getCart();
 
     expect.deepEqual(cart, testCart);
+});
+
+test('addItem will increment an item that is in the cart', (expect) => {
+    localStorage.removeItem('CART');
+
+    const testCart = [
+        { id: '1', qty: 2 },
+        { id: '4', qty: 1 }
+    ];
+
+    localStorage.setItem('CART', JSON.stringify(testCart));
+    addItem('1');
+    const cart = getCart();
+    const expected = [
+        { id: '1', qty: 3 },
+        { id: '4', qty: 1 }
+    ];
+
+    expect.deepEqual(cart, expected);
 });
