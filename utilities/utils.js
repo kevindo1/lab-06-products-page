@@ -15,7 +15,7 @@ export function calculatorOrderTotal(cart, plants) {
     let orderTotal = 0;
     for (let item of cart) {
         const plant = findById(item.id, plants);
-        orderTotal = orderTotal + plant.price * item.quantity;
+        orderTotal = orderTotal + plant.price * item.qty;
     }
     return orderTotal;
 }

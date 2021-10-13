@@ -10,10 +10,10 @@ export function renderLineItems(cartItem, plantData) {
     tdPrice.textContent = toUSD(plantData.price);
 
     const tdQty = document.createElement('td');
-    tdQty.textContent = cartItem.quantity;
+    tdQty.textContent = cartItem.qty;
 
     const tdTotal = document.createElement('td');
-    tdTotal.textContent = toUSD(cartItem.quantity * plantData.price);
+    tdTotal.textContent = toUSD(cartItem.qty * plantData.price);
 
     tr.append(tdName, tdPrice, tdQty, tdTotal);
     
