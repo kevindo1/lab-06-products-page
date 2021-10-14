@@ -113,9 +113,9 @@ test('clearCart will clear the cart', (expect) => {
     const testCart = [
         { id: '1', qty: '1' },
         { id: '4', qty: '2' }
-    ]
+    ];
     localStorage.setItem('CART', JSON.stringify(testCart));
-    localStorage.removeItem('CART');
+    clearCart()
     const cart = [];
     const expected = getCart();
     expect.deepEqual(cart, expected);
