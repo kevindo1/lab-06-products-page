@@ -4,7 +4,7 @@ import { plants } from '../data/plants.js';
 import { renderPlants } from '../renderPlants.js';
 import { findById, addItem } from '../utilities/utils.js';
 // import { cart } from '../data/cart-data.js';
-import { getCart } from '../utilities/utils.js';
+import { getCart, clearCart } from '../utilities/utils.js';
 
 const test = QUnit.test;
 
@@ -110,9 +110,13 @@ test('addItem will add a new item if not in the cart', (expect) => {
 });
 
 test('clearCart will clear the cart', (expect) => {
-    localStorage.setItem('CART', JSON.stringify('CART'));
-    localStorage.removeItem('CART');
-    const cart = getCart();
-    const expected = [];
+    const testCart = [
+        { id: '1', qty: '1' },
+        { id: '4', qty: '2' }
+    ];
+    localStorage.setItem('CART', JSON.stringify(testCart));
+    clearCart();
+    const cart = [];
+    const expected = getCart();
     expect.deepEqual(cart, expected);
 });
