@@ -25,6 +25,6 @@ for (let addButton of addButtons) {
         addItem(addButton.id);
         alert('Added item to cart');
     });
-};
+}
 
 

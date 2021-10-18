@@ -1,4 +1,4 @@
-import { plants } from "../data/plants.js";
+import { plants } from '../data/plants.js';
 
 export function findById(id, items) {
     for (let item of items) { 
@@ -44,23 +44,23 @@ export function addItem(id) {
     }
     const stringCart = JSON.stringify(cart);
     localStorage.setItem('CART', stringCart);
-};
+}
 
 export function clearCart() {
     localStorage.setItem('CART', JSON.stringify('CART'));
     localStorage.removeItem('CART');
-};
+}
 
 export function getProducts() {
     let localProducts = localStorage.getItem('PRODUCTS');
     const products = JSON.parse(localProducts);
     
-    if(!products) {
+    if (!products) {
         const plantString = JSON.stringify(plants);
         localStorage.setItem('PRODUCTS', plantString);
     }
     return products || plants; 
-};
+}
 
 
 export function addProduct(newPlant) {
@@ -69,4 +69,9 @@ export function addProduct(newPlant) {
 
     let productsString = JSON.stringify(lsProducts);
     localStorage.setItem('PRODUCTS', productsString);
-};
+}
+
+export function removeProduct(newPlant) {
+    let lsProducts = getProducts();
+    
+}

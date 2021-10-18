@@ -1,9 +1,8 @@
 import { plants } from '../data/plants.js';
 // import { cart } from '../data/cart-data.js';
-import { calculatorOrderTotal, findById, toUSD, getCart } from '../utilities/utils.js';
+import { calculatorOrderTotal, findById, toUSD } from '../utilities/utils.js';
 import { renderLineItems } from '../renderLineItems.js';
 
-const cart = getProducts();
 const tbody = document.getElementById('table-body');
 const tdOrderTotal = document.getElementById('order-total');
 

@@ -3,7 +3,7 @@
 import { plants } from '../data/plants.js';
 import { renderPlants } from '../renderPlants.js';
 // import { cart } from '../data/cart-data.js';
-import { getCart, clearCart, addProduct, getProducts, findById, addItem} from '../utilities/utils.js';
+import { getCart, clearCart, addProduct, getProducts, findById, addItem } from '../utilities/utils.js';
 
 const test = QUnit.test;
 
@@ -127,7 +127,7 @@ test('addProduct should add product to arry', (expect) => {
         name: 'Philodendron Melanochrysum',
         img: './assets/PhilodendronMelanochrysum.jpg',
         price: 60
-    }
+    };
     addProduct(newProduct);
 
     products = getProducts();

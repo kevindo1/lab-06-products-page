@@ -1,4 +1,4 @@
-import { addProduct } from "../utilities/utils.js";
+import { addProduct } from '../utilities/utils.js';
 
 const form = document.getElementById('plant-form');
 
@@ -12,7 +12,7 @@ form.addEventListener('submit', (e)=> {
         img: data.get('img'),
         price: Number(data.get('price'))
     };
-    console.log(newPlant);
+    
     addProduct(newPlant);
     alert('A new plant has been added');
     form.reset();

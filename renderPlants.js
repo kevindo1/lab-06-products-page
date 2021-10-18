@@ -18,7 +18,12 @@ export function renderPlants(plant) {
     buyButton.id = plant.id;
     buyButton.classList.add('buy-button');
 
-    plantCard.append(plantHeader, plantImg, plantPrice, buyButton);
+    const removeButton = document.createElement('button');
+    removeButton.textContent = 'Remove';
+    removeButton.id = plant.id;
+    removeButton.classList.add('remove-button');
+
+    plantCard.append(plantHeader, plantImg, plantPrice, buyButton, removeButton);
 
     return plantCard;
 }
