@@ -2,7 +2,7 @@
 
 import { plants } from './data/plants.js';
 import { renderPlants } from './renderPlants.js';
-import { addItem } from './utilities/utils.js';
+import { addItem, getProducts } from './utilities/utils.js';
 
 const productPage = document.getElementById('product-page');
 
@@ -24,4 +24,6 @@ for (let addButton of addButtons) {
         addItem(addButton.id);
         alert('Added item to cart');
     });
-}
+};
+
+const plants = getProducts(); 

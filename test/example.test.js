@@ -2,9 +2,8 @@
 // import { example } from '../example.js';
 import { plants } from '../data/plants.js';
 import { renderPlants } from '../renderPlants.js';
-import { findById, addItem } from '../utilities/utils.js';
 // import { cart } from '../data/cart-data.js';
-import { getCart, clearCart } from '../utilities/utils.js';
+import { getCart, clearCart, addProduct, getProducts, findById, addItem} from '../utilities/utils.js';
 
 const test = QUnit.test;
 
@@ -119,4 +118,18 @@ test('clearCart will clear the cart', (expect) => {
     const cart = [];
     const expected = getCart();
     expect.deepEqual(cart, expected);
+});
+
+test('addProduct should add product to arry', (expect) => {
+    let products = getProducts();
+    const newProduct = {
+        id: '8', 
+        name: 'Philodendron Melanochrysum',
+        img: './assets/PhilodendronMelanochrysum.jpg',
+        price: 60
+    }
+    addProduct(newProduct);
+
+    products = getProducts();
+    expect.equal(products.length)
 });
