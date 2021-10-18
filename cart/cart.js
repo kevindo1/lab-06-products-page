@@ -1,5 +1,5 @@
 import { plants } from '../data/plants.js';
-// import { cart } from '../data/cart-data.js';
+import { cart } from '../data/cart-data.js';
 import { calculatorOrderTotal, findById, toUSD } from '../utilities/utils.js';
 import { renderLineItems } from '../renderLineItems.js';
 

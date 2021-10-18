@@ -71,7 +71,7 @@ export function addProduct(newPlant) {
     localStorage.setItem('PRODUCTS', productsString);
 }
 
-export function removeProduct(newPlant) {
-    let lsProducts = getProducts();
+// export function removeProduct(newPlant) {
+//     let lsProducts = getProducts();
     
-}
+// }
