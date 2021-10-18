@@ -1,9 +1,10 @@
 // import functions and grab DOM elements
 
-import { plants } from './data/plants.js';
+// import { plants } from './data/plants.js';
 import { renderPlants } from './renderPlants.js';
 import { addItem, getProducts } from './utilities/utils.js';
 
+const plants = getProducts(); 
 const productPage = document.getElementById('product-page');
 
 for (let plant of plants) {
@@ -26,4 +27,4 @@ for (let addButton of addButtons) {
     });
 };
 
-const plants = getProducts(); 
+
