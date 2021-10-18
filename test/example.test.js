@@ -123,7 +123,7 @@ test('clearCart will clear the cart', (expect) => {
 test('addProduct should add product to arry', (expect) => {
     let products = getProducts();
     const newProduct = {
-        id: '8', 
+        id: '7', 
         name: 'Philodendron Melanochrysum',
         img: './assets/PhilodendronMelanochrysum.jpg',
         price: 60
@@ -131,5 +131,5 @@ test('addProduct should add product to arry', (expect) => {
     addProduct(newProduct);
 
     products = getProducts();
-    expect.equal(products.length)
+    expect.equal(products.length, 7);
 });

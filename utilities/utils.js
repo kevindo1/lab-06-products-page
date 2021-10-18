@@ -55,20 +55,18 @@ export function getProducts() {
     let localProducts = localStorage.getItem('PRODUCTS');
     const products = JSON.parse(localProducts);
     
-    if(!plants) {
+    if(!products) {
         const plantString = JSON.stringify(plants);
         localStorage.setItem('PRODUCTS', plantString);
-
-        localProducts = plants;
-
-        return products || plants; 
     }
+    return products || plants; 
 };
 
-export function addProduct(newPlant) {
-    let products = getProducts();
-    products.push(newPlant);
 
-    let productString = JSON.stringify(products);
-    localStorage.setItem('PRODUCTS', productString);
+export function addProduct(newPlant) {
+    let lsProducts = getProducts();
+    lsProducts.push(newPlant);
+
+    let productsString = JSON.stringify(lsProducts);
+    localStorage.setItem('PRODUCTS', productsString);
 };

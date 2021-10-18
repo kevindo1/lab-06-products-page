@@ -3,7 +3,7 @@ import { plants } from '../data/plants.js';
 import { calculatorOrderTotal, findById, toUSD, getCart } from '../utilities/utils.js';
 import { renderLineItems } from '../renderLineItems.js';
 
-const cart = getCart();
+const cart = getProducts();
 const tbody = document.getElementById('table-body');
 const tdOrderTotal = document.getElementById('order-total');
 
