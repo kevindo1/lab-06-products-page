@@ -2,16 +2,15 @@
 // import { example } from '../example.js';
 import { plants } from '../data/plants.js';
 import { renderPlants } from '../renderPlants.js';
-import { findById, addItem } from '../utilities/utils.js';
 // import { cart } from '../data/cart-data.js';
-import { getCart, clearCart } from '../utilities/utils.js';
+import { getCart, clearCart, addProduct, getProducts, findById, addItem } from '../utilities/utils.js';
 
 const test = QUnit.test;
 
 test('renderPlants should return HTML snippet', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = '<div class="plant-card"><h2>Anthurium Regale</h2><img src="./assets/AnthuriumRegale.jpeg"><h4>$120.00</h4><button id="1" class="buy-button">Add to Cart</button></div>';
+    const expected = '<div class="plant-card"><h2>Anthurium Regale</h2><img src="./assets/AnthuriumRegale.jpeg"><h4>$120.00</h4><button id="1" class="buy-button">Add to Cart</button><button id="1" class="remove-button">Remove</button></div>';
     
     //Act 
     // Call the function you're testing and set the result to a const
@@ -119,4 +118,18 @@ test('clearCart will clear the cart', (expect) => {
     const cart = [];
     const expected = getCart();
     expect.deepEqual(cart, expected);
+});
+
+test('addProduct should add product to arry', (expect) => {
+    let products = getProducts();
+    const newProduct = {
+        id: '7', 
+        name: 'Philodendron Melanochrysum',
+        img: './assets/PhilodendronMelanochrysum.jpg',
+        price: 60
+    };
+    addProduct(newProduct);
+
+    products = getProducts();
+    expect.equal(products.length, 7);
 });

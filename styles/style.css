@@ -55,3 +55,13 @@ a {
     margin-bottom: 20px;
 }
 
+.remove-button {
+    border: none;
+    background-color: transparent;
+}
+
+.remove-button:hover {
+    cursor: pointer;
+    color: red;
+}
+

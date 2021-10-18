@@ -1,3 +1,5 @@
+import { plants } from '../data/plants.js';
+
 export function findById(id, items) {
     for (let item of items) { 
         if (item.id === id) {
@@ -49,3 +51,27 @@ export function clearCart() {
     localStorage.removeItem('CART');
 }
 
+export function getProducts() {
+    let localProducts = localStorage.getItem('PRODUCTS');
+    const products = JSON.parse(localProducts);
+    
+    if (!products) {
+        const plantString = JSON.stringify(plants);
+        localStorage.setItem('PRODUCTS', plantString);
+    }
+    return products || plants; 
+}
+
+
+export function addProduct(newPlant) {
+    let lsProducts = getProducts();
+    lsProducts.push(newPlant);
+
+    let productsString = JSON.stringify(lsProducts);
+    localStorage.setItem('PRODUCTS', productsString);
+}
+
+// export function removeProduct(newPlant) {
+//     let lsProducts = getProducts();
+    
+// }
