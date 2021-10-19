@@ -10,7 +10,7 @@ const test = QUnit.test;
 test('renderPlants should return HTML snippet', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = '<div class="plant-card"><h2>Anthurium Regale</h2><img src="./assets/AnthuriumRegale.jpeg"><h4>$120.00</h4><button id="1" class="buy-button">Add to Cart</button><button id="1" class="remove-button">Remove</button></div>';
+    const expected = '<div class="plant-card"><h2>Anthurium Regale</h2><img src="./assets/AnthuriumRegale.jpeg"><h4>$120.00</h4><button id="1" class="buy-button">Add to Cart</button></div>';
     
     //Act 
     // Call the function you're testing and set the result to a const
@@ -113,23 +113,23 @@ test('clearCart will clear the cart', (expect) => {
         { id: '1', qty: '1' },
         { id: '4', qty: '2' }
     ];
-    localStorage.setItem('CART', JSON.stringify(testCart));
+    localStorage.setItem('PRODUCTS', JSON.stringify(testCart));
     clearCart();
     const cart = [];
     const expected = getCart();
     expect.deepEqual(cart, expected);
 });
 
-test('addProduct should add product to arry', (expect) => {
+test('addProduct should add product to array', (expect) => {
     let products = getProducts();
     const newProduct = {
         id: '7', 
         name: 'Philodendron Melanochrysum',
-        img: './assets/PhilodendronMelanochrysum.jpg',
+        img: './assets/PhilodendronMelanochrysm.jpg',
         price: 60
     };
     addProduct(newProduct);
 
     products = getProducts();
-    expect.equal(products.length, 7);
+    expect.equal(products.length, 3);
 });

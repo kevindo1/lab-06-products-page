@@ -1,11 +1,13 @@
-import { plants } from '../data/plants.js';
-import { cart } from '../data/cart-data.js';
-import { calculatorOrderTotal, findById, toUSD } from '../utilities/utils.js';
+// import { plants } from '../data/plants.js';
+// import { cart } from '../data/cart-data.js';
+import { calculatorOrderTotal, findById, getProducts, toUSD, getCart } from '../utilities/utils.js';
 import { renderLineItems } from '../renderLineItems.js';
 
 const tbody = document.getElementById('table-body');
 const tdOrderTotal = document.getElementById('order-total');
 
+const cart = getCart();
+const plants = getProducts();
 
 for (let cartItem of cart) {
     const plantData = findById(cartItem.id, plants);

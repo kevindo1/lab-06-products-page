@@ -64,10 +64,10 @@ export function getProducts() {
 
 
 export function addProduct(newPlant) {
-    let lsProducts = getProducts();
-    lsProducts.push(newPlant);
+    let products = getProducts();
+    products.push(newPlant);
 
-    let productsString = JSON.stringify(lsProducts);
+    let productsString = JSON.stringify(products);
     localStorage.setItem('PRODUCTS', productsString);
 }
 
