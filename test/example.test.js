@@ -131,5 +131,5 @@ test('addProduct should add product to array', (expect) => {
     addProduct(newProduct);
 
     products = getProducts();
-    expect.equal(products.length, 7);
+    expect.equal(products.length, 3);
 });
