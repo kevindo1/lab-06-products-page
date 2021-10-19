@@ -10,7 +10,7 @@ const test = QUnit.test;
 test('renderPlants should return HTML snippet', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = '<div class="plant-card"><h2>Anthurium Regale</h2><img src="./assets/AnthuriumRegale.jpeg"><h4>$120.00</h4><button id="1" class="buy-button">Add to Cart</button><button id="1" class="remove-button">Remove</button></div>';
+    const expected = '<div class="plant-card"><h2>Anthurium Regale</h2><img src="./assets/AnthuriumRegale.jpeg"><h4>$120.00</h4><button id="1" class="buy-button">Add to Cart</button></div>';
     
     //Act 
     // Call the function you're testing and set the result to a const
