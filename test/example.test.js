@@ -121,6 +121,7 @@ test('clearCart will clear the cart', (expect) => {
 });
 
 test('addProduct should add product to array', (expect) => {
+    localStorage.removeItem('PRODUCTS');
     let products = getProducts();
     const newProduct = {
         id: '7', 
@@ -131,5 +132,5 @@ test('addProduct should add product to array', (expect) => {
     addProduct(newProduct);
 
     products = getProducts();
-    expect.equal(products.length, 3);
+    expect.equal(products.length, 7);
 });
